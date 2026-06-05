@@ -1,0 +1,35 @@
+{
+  "name": "inlive",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/extension.cjs",
+  "bin": {
+    "js-in-live": "bin/js-in-live"
+  },
+  "scripts": {
+    "build": "tsx build.ts",
+    "codex:generate-types": "codex app-server generate-ts --out src/generated/codex-app-server",
+    "dev": "node scripts/dev.mjs",
+    "dev:all": "node scripts/devAll.mjs",
+    "doctor": "tsx scripts/doctor.ts",
+    "host:restart": "npm run host:stop && npm run live:dev",
+    "host:stop": "tsx scripts/hostStop.ts",
+    "live:dev": "tsx scripts/liveDev.ts",
+    "start": "tsx build.ts && extensions-cli run",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@ableton-extensions/sdk": "file:/Users/dan/Downloads/extensions-sdk-1/ableton-extensions-sdk-1.0.0-beta.0.tgz",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@ableton-extensions/cli": "file:/Users/dan/Downloads/extensions-sdk-1/ableton-extensions-cli-1.0.0-beta.0.tgz",
+    "@types/node": "^25.0.0",
+    "@types/ws": "^8.5.13",
+    "esbuild": "0.28.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.5",
+    "vitest": "^3.2.4"
+  }
+}

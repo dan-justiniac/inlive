@@ -1,0 +1,7 @@
+{
+  "name": "InLive",
+  "author": "Dan",
+  "entry": "dist/extension.cjs",
+  "version": "0.0.1",
+  "minimumApiVersion": "1.0.0"
+}
